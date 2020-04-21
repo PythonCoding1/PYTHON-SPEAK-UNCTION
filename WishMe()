@@ -24,8 +24,8 @@ import datetime
 import pyttsx3
 engine=pyttsx3.init('sapi5')
 voices =engine.getProperty('voices')
-engine.setProperty('voice',voices[0])   #see the spea() function  so that you can use it any program you want 
-                                        #
+engine.setProperty('voice',voices[0])   #see the speak() function  so that you can use it any program you want ,follow link to learn about speak() function
+                                        #https://github.com/PythonCoding1/PYTHON-SPEAK-UNCTION/commit/5aece1d16bdbec5fbc3600ace4690307221a6e7a
 def speak(audio): 
  engine.say(audio)
  engine.runAndWait()
@@ -39,6 +39,9 @@ def WishME():
         speak("good afternoon")
   else:
      speak("good evening")
-WishME()     
+WishME() 
+
+output:
+instead of printing it will speak good morning!
 
 
