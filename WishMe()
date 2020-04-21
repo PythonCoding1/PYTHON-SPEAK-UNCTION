@@ -1,0 +1,44 @@
+python code:
+import datetime                        
+def WishME():
+  hour=int(datetime.datetime.now().hour)
+  if hour>=0 and hour<12:
+   print ("good morning")
+
+  elif hour >= 12 and hour <18:
+        print("good afternoon")
+  else:
+     print("good evening")
+WishME()                        $# <-here we call the WishMe() function
+
+output:
+the output will depend on time when you run this program
+supoose you run this program in morning it will print"good morning"!
+
+SO, we already know aboot speak function .lets try speak function.so ,that instead of just printing it will 
+speak good morning !
+
+python code to speak WishMe():
+
+import datetime   
+import pyttsx3
+engine=pyttsx3.init('sapi5')
+voices =engine.getProperty('voices')
+engine.setProperty('voice',voices[0])   #see the spea() function  so that you can use it any program you want 
+                                        #
+def speak(audio): 
+ engine.say(audio)
+ engine.runAndWait()
+
+def WishME():
+  hour=int(datetime.datetime.now().hour)
+  if hour>=0 and hour<12:
+    speak("good morning")
+
+  elif hour >= 12 and hour <18:
+        speak("good afternoon")
+  else:
+     speak("good evening")
+WishME()     
+
+
