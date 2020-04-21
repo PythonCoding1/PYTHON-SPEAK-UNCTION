@@ -1,0 +1,10 @@
+import pyttsx3
+engine=pyttsx3.init('sapi5')
+voices =engine.getProperty('voices')
+engine.setProperty('voice',voices[0])
+def speak(audio):
+ engine.say(audio)
+ engine.runAndWait()
+#now you can all speak() any where in your program to
+
+speak("what's your name")
