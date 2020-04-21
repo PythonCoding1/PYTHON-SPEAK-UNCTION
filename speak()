@@ -1,10 +1,29 @@
+
+#python code
 import pyttsx3
 engine=pyttsx3.init('sapi5')
 voices =engine.getProperty('voices')
 engine.setProperty('voice',voices[0])
+
 def speak(audio):
  engine.say(audio)
  engine.runAndWait()
-#now you can all speak() any where in your program to
+speak("wha is your name")
+ 
+ 
+Explanatoion:
+ #now you can all speak() any where in your program to
+ speak insted of printing example is given below:
+ 
+ print("what is your name")          #it will print what is your name in output 
+ speak("what's your name")           # it will speak what's your name
+ 
+#you can also use speak() duing user input as follows:
+as you know for text:
+name=input("enter your name:")           #it will ask the name by printing enter your name .
 
-speak("what's your name")
+if you use speak:
+
+name=input(speak("enter your name:))    # it will ask the user to enter name by voice.
+
+
